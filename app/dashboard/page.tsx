@@ -72,7 +72,7 @@ export default async function DashboardPage({ searchParams }: Props) {
             {(ideas ?? []).map((idea) => (
               <article key={idea.id} className="idea-row">
                 <div className="flex flex-col justify-between gap-3 sm:flex-row sm:items-start">
-                  <div className="min-w-0"><h3 className="font-semibold">{idea.title}</h3>{idea.summary && <p className="muted mt-1 text-sm leading-6">{idea.summary}</p>}<p className="muted mt-3 text-xs">Updated {new Date(idea.updated_at).toLocaleDateString()}</p></div>
+                  <div className="min-w-0"><h3 className="font-semibold"><Link className="hover:text-cyan-300" href={`/dashboard/ideas/${idea.id}`}>{idea.title}</Link></h3>{idea.summary && <p className="muted mt-1 text-sm leading-6">{idea.summary}</p>}<p className="muted mt-3 text-xs">Updated {new Date(idea.updated_at).toLocaleDateString()}</p></div>
                   <div className="flex items-center gap-2">
                     <span className="status">{labels[idea.status] ?? idea.status}</span>
                     <form action={updateIdeaStatus}><input type="hidden" name="ideaId" value={idea.id} /><input type="hidden" name="status" value={idea.status === "archived" ? "captured" : "archived"} /><button className="btn btn-quiet text-xs" type="submit">{idea.status === "archived" ? "Restore" : "Archive"}</button></form>
