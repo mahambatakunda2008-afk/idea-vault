@@ -13,7 +13,7 @@ A private workspace for capturing, developing, evaluating and executing ideas. B
 
 1. Install Node.js 20.9+.
 2. Copy `.env.example` to `.env.local`.
-3. Set the Supabase project URL and publishable key.
+3. Set the Supabase project URL, publishable key and site URL.
 4. Set `NEXT_PUBLIC_SITE_URL` to the local or deployed origin, for example `http://localhost:3000`.
 5. Install dependencies with `npm install`.
 6. Run `npm run dev`.
