@@ -1,0 +1,26 @@
+{
+  "expo": {
+    "name": "Idea Vault",
+    "slug": "idea-vault",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "scheme": "ideavault",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.shadecode.ideavault"
+    },
+    "android": {
+      "package": "com.shadecode.ideavault",
+      "adaptiveIcon": {
+        "backgroundColor": "#07131b"
+      }
+    },
+    "plugins": [
+      "expo-sqlite"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
