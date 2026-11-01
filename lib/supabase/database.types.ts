@@ -428,7 +428,10 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      vault_convert_idea_to_project: {
+        Args: { p_idea_id: string; p_target_date?: string }
+        Returns: string
+      }
     }
     Enums: {
       vault_idea_status:
