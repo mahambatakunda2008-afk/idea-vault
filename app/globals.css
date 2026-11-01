@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: dark;
+  --bg: #090d12;
+  --panel: #111820;
+  --panel-soft: #151f29;
+  --line: #263542;
+  --text: #edf4f7;
+  --muted: #91a3ad;
+  --cyan: #43d7e8;
+}
+
+* { box-sizing: border-box; }
+html { min-height: 100%; background: var(--bg); }
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(ellipse at 12% 0%, rgba(27, 133, 150, .13), transparent 35rem),
+    var(--bg);
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+}
+button, input, textarea, select { font: inherit; }
+a { color: inherit; text-decoration: none; }
+.shell { width: min(1120px, calc(100% - 40px)); margin: 0 auto; }
+.topbar { display:flex; align-items:center; justify-content:space-between; min-height:76px; border-bottom:1px solid rgba(145,163,173,.14); }
+.brand { display:flex; align-items:center; gap:11px; font-weight:700; letter-spacing:-.03em; }
+.brand-mark { display:grid; place-items:center; width:34px; height:34px; border:1px solid rgba(67,215,232,.55); border-radius:11px; color:var(--cyan); font-size:18px; }
+.eyebrow { color:var(--cyan); text-transform:uppercase; letter-spacing:.15em; font-size:11px; font-weight:700; }
+.muted { color:var(--muted); }
+.panel { background:linear-gradient(145deg, rgba(21,31,41,.96), rgba(15,22,29,.96)); border:1px solid var(--line); border-radius:18px; }
+.field { width:100%; background:#0b1117; border:1px solid #30414e; border-radius:10px; color:var(--text); padding:12px 14px; outline:none; }
+.field:focus { border-color:var(--cyan); box-shadow:0 0 0 3px rgba(67,215,232,.12); }
+.btn { display:inline-flex; align-items:center; justify-content:center; gap:8px; border:1px solid transparent; border-radius:10px; padding:11px 16px; cursor:pointer; font-weight:650; transition:.18s ease; }
+.btn-primary { background:var(--cyan); color:#061216; }
+.btn-primary:hover { background:#72e5ef; transform:translateY(-1px); }
+.btn-quiet { border-color:#30414e; background:#111a22; color:var(--text); }
+.btn-quiet:hover { border-color:#54717e; }
+.idea-row { border:1px solid rgba(145,163,173,.15); border-radius:13px; padding:17px; background:rgba(9,14,19,.5); transition:border-color .15s ease, transform .15s ease; }
+.idea-row:hover { border-color:rgba(67,215,232,.4); transform:translateY(-1px); }
+.status { display:inline-flex; align-items:center; border-radius:99px; padding:5px 9px; font-size:11px; font-weight:700; background:rgba(67,215,232,.1); color:var(--cyan); }
+@media (max-width:640px) { .shell { width:calc(100% - 28px); } .topbar { min-height:66px; } }
